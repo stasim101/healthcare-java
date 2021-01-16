@@ -1,0 +1,37 @@
+server:
+  servlet:
+    context-path: '/api/v1/healthcare'
+app:
+  jwtExpirationInMs: 120000
+  token:
+    jwtkey: 'VUkNFIl0sInVzZXJfbmFtZSI6ImFkbWluIiwic2NvcGUiOlsiQURNSU4iXSwiZXhwIjoxNjAzMTA4NDA3LCJhdXRob3JpdGllcyI6WyJBQ0NPVU5UTUFOQUdFUiIsIlVTRVJNQU5BR0VSIiwiU0NIRURVTEVSIiwiUkVQT1JUIiw'
+
+jwt:
+  secret: 'hujj%e)gF789Hn4Gyydjqenntoaserca82144'
+management:
+
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: 'env'
+spring:
+  mail:
+    host: smtp.gmail.com
+    password: ahs3HDPIR$3nsvd#dheop%yjmfqBxF
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 10000
+          starttls:
+            enable: true
+            required: true
+          timeout: 10000
+          writetimeout: 10000.0
+    username: notification@worktrim.com
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: 'it'
